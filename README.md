@@ -11,3 +11,4 @@ This project is a simple web application that allows users to track their habits
 
 day 3 
 2 commit 
+3 commit 
