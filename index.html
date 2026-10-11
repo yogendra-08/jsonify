@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="JSONify: a privacy-first JSON formatter, validator, and minifier that runs entirely in your browser." />
+  <title>JSONify | JSON Formatter &amp; Validator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="logo" href="#top" aria-label="JSONify home">
+        <span class="logo__mark" aria-hidden="true">{ }</span>
+        <span class="logo__text">JSONify</span>
+      </a>
+      <div class="nav__right">
+        <span class="badge" title="Your JSON never leaves your browser">🔒 100% client-side</span>
+        <a class="nav__link" href="https://github.com/YOUR-USERNAME/jsonify" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <h1>JSON, simplified.</h1>
+      <p>Format, validate, and minify JSON instantly. Everything runs in your browser, so your data stays with you.</p>
+    </section>
+
+    <section class="toolbar" aria-label="Actions">
+      <div class="toolbar__group">
+        <button type="button" id="format-btn" class="btn btn--primary">Format</button>
+        <button type="button" id="validate-btn" class="btn btn--primary">Validate</button>
+        <button type="button" id="minify-btn" class="btn btn--primary">Minify</button>
+      </div>
+      <div class="toolbar__group">
+        <button type="button" id="sample-btn" class="btn">Load sample</button>
+        <button type="button" id="copy-btn" class="btn">Copy output</button>
+        <button type="button" id="clear-btn" class="btn btn--danger">Clear</button>
+      </div>
+    </section>
+
+    <div id="status" class="status status--ready" role="status" aria-live="polite" aria-atomic="true">
+      <span id="status-icon" class="status__icon" aria-hidden="true">●</span>
+      <span id="status-text">Ready. Paste JSON below or load a sample.</span>
+    </div>
+
+    <section class="editors">
+      <div class="panel">
+        <div class="panel__head">
+          <label for="input-json" class="panel__title">Input JSON</label>
+          <span class="panel__meta"><span id="input-chars">0</span> chars</span>
+        </div>
+        <textarea id="input-json" spellcheck="false" autocomplete="off" autocapitalize="off"
+          placeholder='{"hello": "world"}'></textarea>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <label for="output-json" class="panel__title">Output</label>
+          <span class="panel__meta"><span id="output-chars">0</span> chars · <span id="output-lines">0</span> lines</span>
+        </div>
+        <textarea id="output-json" readonly spellcheck="false" placeholder="Result appears here"></textarea>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Highlights">
+      <article class="card">
+        <h2>Format</h2>
+        <p>Turn compact or messy JSON into clean, two-space indented output.</p>
+      </article>
+      <article class="card">
+        <h2>Validate</h2>
+        <p>Catch syntax errors with the browser's own parser details.</p>
+      </article>
+      <article class="card">
+        <h2>Private by design</h2>
+        <p>No backend, no analytics, no network requests. Your input is never uploaded.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>JSONify · MIT License · Built with HTML, CSS, and vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
